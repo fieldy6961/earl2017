@@ -1,0 +1,73 @@
+# algorithms for use.
+model_config <- list(name=c("rxLogit", "rxBTrees", "rxDForest" 
+                            #,"rxLogisticRegression","rxFastTrees","rxFastForest","rxNeuralNet"
+),
+para=list(#rxLogit Parms
+  list(list(maxIterations=10,
+            coeffTolerance=1e-6),
+       list(maxIterations=15,
+            coeffTolerance=2e-6),
+       list(maxIterations=20,
+            coeffTolerance=3e-6),
+       list(maxIterations=25,
+            coeffTolerance=1e-6)),
+  #rxBTrees Parms
+  list(list(nTree=30,
+            learningRate=0.05),
+       list(nTree=60,
+            learningRate=0.1),
+       list(nTree=90,
+            learningRate=0.15),
+       list(nTree=10,
+            learningRate=0.1)),
+  #rxDForest Parms
+  list(list(cp=0.01,
+            nTree=10,
+            mTry=5),
+       list(cp=0.01,
+            nTree=20,
+            mTry=10),
+       list(cp=0,
+            nTree=30,
+            mTry=10),
+       list(cp=0,
+            nTree=10,
+            mTry=NULL))
+  #,
+  # #rxLogisticRegression Parms
+  # list(list(maxIterations=10,
+  #           optTol=1e-6),
+  #      list(maxIterations=15,
+  #           optTol=2e-6),
+  #      list(maxIterations=20,
+  #           optTol=3e-6),
+  #      list(maxIterations=2147483647,
+  #           optTol=1e-7)),
+  # #rxFastTrees Parms
+  # list(list(numTrees=10,
+  #           learningRate=0.05),
+  #      list(numTrees=15,
+  #           learningRate=0.1),
+  #      list(numTrees=20,
+  #           learningRate=0.15),
+  #      list(numTrees=100,
+  #           learningRate=0.2)),
+  # #rxFastForest Parms
+  # list(list(gainConfLevel=0,
+  #           numTrees=50),
+  #      list(gainConfLevel=0.1,
+  #           numTrees=100),
+  #      list(gainConfLevel=0.2,
+  #           numTrees=150),
+  #      list(gainConfLevel=0,
+  #           numTrees=100)),
+  # #rxNeuralNet Parms
+  # list(list(numIterations=50,
+  #           numHiddenNodes=50),
+  #      list(numIterations=100,
+  #           numHiddenNodes=100),
+  #      list(numIterations=150,
+  #           numHiddenNodes=150),
+  #      list(numIterations=200,
+  #           numHiddenNodes=200))
+))
